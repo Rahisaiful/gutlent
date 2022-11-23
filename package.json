@@ -1,0 +1,25 @@
+{
+  "name": "gutlent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahisaiful/gutlent.git"
+  },
+  "keywords": [
+    "gutenberg"
+  ],
+  "author": "wpmobo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rahisaiful/gutlent/issues"
+  },
+  "homepage": "https://github.com/Rahisaiful/gutlent#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.5.0"
+  }
+}
