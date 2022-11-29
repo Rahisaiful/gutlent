@@ -36,17 +36,17 @@ final class Gutlent {
 	}
 
 	private static function registerBlock() {
-		register_block_type( 'gutlent_blocks/reaction-reviews', [
+		register_block_type( 'gutlent_blocks/reaction-review', [
 			'render_callback' => [ __CLASS__, 'rcb_reaction_reviews' ],
 			'editor_script' => 'mcqac-related-quiz-block-script',
 	        'editor_style'  => 'mcqac-related-quiz-block-editor-style',
 	        'script'        => 'mcqac-related-quiz-block-frontend-style',
-	        'style'         => 'mcqac-related-quiz-block-frontend-style',
-		]):
+	        'style'         => 'mcqac-related-quiz-block-frontend-style'
+		]);
 	}
 
 	private static function rcb_reaction_reviews() {
-		
+		echo '<p>Say hello</p>';
 	}
 
 }

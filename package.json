@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +22,8 @@
   },
   "homepage": "https://github.com/Rahisaiful/gutlent#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^24.5.0"
+    "@wordpress/scripts": "^24.5.0",
+    "browser-sync": "^2.27.10",
+    "npm-run-all": "^4.1.5"
   }
 }
