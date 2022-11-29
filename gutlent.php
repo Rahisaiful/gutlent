@@ -18,7 +18,7 @@ final class Gutlent {
 	private static $instance;
 
 	function __construct() {
-		add_action( 'init', [ __CLASS__, 'onInit' ] );
+		add_action( 'init', [ __CLASS__, 'registerBlock' ] );
 	}
 
 	public static function getInstance() {
@@ -35,18 +35,22 @@ final class Gutlent {
 		self::registerBlock();
 	}
 
-	private static function registerBlock() {
-		register_block_type( 'gutlent_blocks/reaction-review', [
+	public static function registerBlock() {
+
+		wp_enqueue_script('reactionReviewScript', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'));
+	    wp_enqueue_style('reactionReviewStyle', plugin_dir_url(__FILE__) . 'build/index.css');
+
+		register_block_type( 'gutlent-blocks/gutlent-reaction-review', [
 			'render_callback' => [ __CLASS__, 'rcb_reaction_reviews' ],
-			'editor_script' => 'mcqac-related-quiz-block-script',
-	        'editor_style'  => 'mcqac-related-quiz-block-editor-style',
-	        'script'        => 'mcqac-related-quiz-block-frontend-style',
-	        'style'         => 'mcqac-related-quiz-block-frontend-style'
-		]);
+			'editor_script' => 'reactionReviewScript',
+	        'editor_style'  => 'reactionReviewStyle'		
+	    ]);
 	}
 
-	private static function rcb_reaction_reviews() {
+	public static function rcb_reaction_reviews() {
+		ob_start();
 		echo '<p>Say hello</p>';
+		return ob_get_clean();
 	}
 
 }

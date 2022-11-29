@@ -1,11 +1,16 @@
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/blocks/reaction-review/reaction-review.js":
 /*!*******************************************************!*\
   !*** ./src/blocks/reaction-review/reaction-review.js ***!
   \*******************************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
 /**
  * BLOCK: reaction review
@@ -19,14 +24,33 @@ const {
 const {
   registerBlockType
 } = wp.blocks;
-registerBlockType('gutlent_blocks/reaction-review', {
+registerBlockType('gutlent-blocks/gutlent-reaction-review', {
   title: __('Reaction Review', 'gutlent'),
   icon: 'dashicons-post-status',
   // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
   category: 'common',
   // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
-  keywords: [__('Reaction', 'gutlent'), __('Review', 'gutlent'), __('Like', 'gutlent'), __('Dislike', 'gutlent')]
+  keywords: [__('Reaction', 'gutlent'), __('Review', 'gutlent'), __('Like', 'gutlent'), __('Dislike', 'gutlent')],
+  edit: EditComponent,
+  save: function () {
+    return null;
+  }
 });
+function EditComponent(props) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "makeUpYourBlockTypeName"
+  }, "Say hello TEst");
+}
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["element"];
 
 /***/ })
 
@@ -99,15 +123,13 @@ registerBlockType('gutlent_blocks/reaction-review', {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_reaction_review_reaction_review_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/reaction-review/reaction-review.js */ "./src/blocks/reaction-review/reaction-review.js");
-/* harmony import */ var _blocks_reaction_review_reaction_review_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_blocks_reaction_review_reaction_review_js__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * Gutenberg Blocks
  *
